@@ -8,16 +8,14 @@ import java.util.Set;
  * date : 2022.09.28
  * description : 입력받은 문자열이 유효한 값인지 검증한다.
  */
-public class Valid {
+public class Validator {
 
-    public static boolean isValid(String input){
+    public static boolean isBaseBallValid(String input){
 
-        // 3자리 숫자가 아니면 종료
         if(!is3NumberValid(input)){
             throw new IllegalArgumentException(Message.MSG_INPUT_ERROR.getMessage());
         }
 
-        // 중복된 숫자가 있으면 종료
         if(!isDuplicateNumberValid(input)){
             throw new IllegalArgumentException(Message.MSG_INPUT_ERROR.getMessage());
         }
