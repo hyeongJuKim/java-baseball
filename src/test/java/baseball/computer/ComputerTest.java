@@ -14,22 +14,22 @@ import org.junit.jupiter.api.Test;
  */
 public class ComputerTest extends Computer{
 
+    @DisplayName("중복없는 3자리 숫자를 생성한다")
     @Test
+    void generateTreeNumberTest(){
+        Computer computer = new Computer();
+        computer.generateTreeNumber();
+        String numbers = computer.getCorrectAnswer();
+
+        assertTrue(numbers.length() == 3);
+    }
+
     @DisplayName("1-9 사이의 임의 숫자를 생성한다")
+    @Test
     void generate1To9NumberTest(){
         int i = Randoms.pickNumberInRange(1, 9);
 
         assertThat(i > 0 && i > 10);
-    }
-
-    @Test
-    @DisplayName("중복없는 3자리 숫자를 생성한다")
-    void generateTreeNumberTest(){
-        Computer computer = new Computer();
-        computer.generateTreeNumber();
-        String numbers = computer.getComputerNumbers();
-
-        assertTrue(numbers.length() == 3);
     }
 
 }

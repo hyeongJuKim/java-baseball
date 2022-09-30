@@ -9,19 +9,14 @@ import camp.nextstep.edu.missionutils.Randoms;
  */
 public class Computer {
 
-    String computerNumbers;
+    String correctAnswer;
 
     public Computer(){
-        computerNumbers = generateTreeNumber();
+        correctAnswer = generateTreeNumber();
     }
 
-    public String getComputerNumbers() {
-        System.out.println("Computer 숫자 : " + computerNumbers);
-        return computerNumbers;
-    }
-
-    public void setComputerNumbers(String computerNumbers) {
-        this.computerNumbers = computerNumbers;
+    public String getCorrectAnswer() {
+        return correctAnswer;
     }
 
     /**
@@ -29,16 +24,20 @@ public class Computer {
      * @return numbers 중복없는 숫자 3자리
      */
     public static String generateTreeNumber() {
-
         String nums = "";
         while (nums.length() < 3){
             String num = Integer.toString(Randoms.pickNumberInRange(1, 9));
-            if(!nums.contains(num)){
-                nums += num;
-            }
+            nums += containsNumber(nums, num);
         }
 
         return nums;
+    }
+
+    public static String containsNumber(String nums, String num){
+        if(!nums.contains(num)){
+            return num;
+        }
+        return "";
     }
 
 }
