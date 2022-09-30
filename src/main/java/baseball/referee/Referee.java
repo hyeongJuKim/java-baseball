@@ -43,7 +43,7 @@ public class Referee {
     }
 
     private static void printStrike(int strikeCount){
-        if(strikeCount > 0 && strikeCount < 3){
+        if(strikeCount > 0){
             System.out.print(strikeCount + Message.MSG_RULE_STRIKE.getMessage() + " ");
         }
     }
