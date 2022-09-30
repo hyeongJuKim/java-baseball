@@ -6,7 +6,7 @@ package baseball.common;
  * description : 출력 message
  */
 public enum Message {
-    MSG_GAME_START("숫자 야구 게임시 시작되었습니다 !"),
+    MSG_GAME_START("숫자 야구 게임이 시작되었습니다 !"),
     MSG_INPUT_NUMBERS("숫자를 입력해주세요 : "),
     MSG_GAME_ENDING("3개의 숫자를 모두 맞히셨습니다! 게임 종료"),
     MSG_GAME_EXIT("게임을 종료합니다."),

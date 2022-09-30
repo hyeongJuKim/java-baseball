@@ -14,7 +14,7 @@ public class MessageTest {
 
     @Test
     @DisplayName("enum message가 정상적으로 출력되는지 테스트한다")
-    void get_enum_message_test(){
+    void getEnumMessageTest(){
         String msgInputNumbersMessage = Message.MSG_INPUT_NUMBERS.getMessage();
         assertEquals(msgInputNumbersMessage,"숫자를 입력해주세요 : ");
     }
